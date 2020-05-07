@@ -4,8 +4,17 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/local/include/io2d"
+                "/usr/local/include/io2d/**",
+                "/usr/include/cairo"
             ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": false,
+                "path": [
+                    "${workspaceFolder}/**",
+                    "/usr/local/include/io2d/**",
+                    "/usr/include/cairo"
+                ]
+            },
             "defines": [],
             "compilerPath": "/usr/bin/g++",
             "cStandard": "c11",
