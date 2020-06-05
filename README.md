@@ -8,8 +8,8 @@ This repo contains the starter code for the Route Planning project.
 ## About
 
 * A map can be imported from a [OSM-File](https://www.openstreetmap.org/#map=6/51.330/10.453)
-* On the map two Points can be specified
-* The programm paints the shortest way on the map and the distance
+* On the map start and end coordinates can be specified by the user
+* The programm calculates the shortest distance and paints the way on the map
 
 
 ## Cloning
