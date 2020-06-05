@@ -80,10 +80,13 @@ int main(int argc, const char **argv)
         std::cout << "Reading OpenStreetMap data from the following file: " <<  
             osm_data_file << std::endl;
         auto data = ReadFile(osm_data_file);
-        if( !data )
+        if( !data ) {
             std::cout << "Failed to read." << std::endl;
-        else
+            return -1;
+        }
+        else {
             osm_data = std::move(*data);
+        }
     }
     
     // TODO 1: Declare floats `start_x`, `start_y`, `end_x`, and `end_y` and get
