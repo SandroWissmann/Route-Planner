@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Add the path of the cmake files to the CMAKE_MODULE_PATH
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
 
-project(OSM_A_star_search)
+project(route_planner)
 
 # Set library output path to /lib
 set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/lib")
@@ -25,7 +25,7 @@ add_subdirectory(thirdparty/pugixml)
 add_subdirectory(thirdparty/googletest)
 
 # Add project executable
-add_executable(OSM_A_star_search src/main.cpp src/model.cpp src/render.cpp src/route_model.cpp src/route_planner.cpp)
+add_executable(route_planner src/main.cpp src/model.cpp src/render.cpp src/route_model.cpp src/route_planner.cpp)
 
 target_link_libraries(route_planner
     PRIVATE io2d::io2d
@@ -46,9 +46,9 @@ target_link_libraries(test
 
 # Set options for Linux or Microsoft Visual C++
 if( ${CMAKE_SYSTEM_NAME} MATCHES "Linux" )
-    target_link_libraries(OSM_A_star_search PUBLIC pthread)
+    target_link_libraries(route_planner PUBLIC pthread)
 endif()
 
 if(MSVC)
-	target_compile_options(OSM_A_star_search PUBLIC /D_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING /wd4459)
+	target_compile_options(route_planner PUBLIC /D_SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING /wd4459)
 endif()

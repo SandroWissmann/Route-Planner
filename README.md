@@ -1,18 +1,22 @@
-# Route Planning Project
+# Route Route Planner
 
 This repo contains the starter code for the Route Planning project.
 
-<img src="map.png" width="600" height="450" />
+<img src="docs/konsole.png"/>
+<img src="docs/result.png"/>
+
+## About
+
+* A map can be imported from a [OSM-File](https://www.openstreetmap.org/#map=6/51.330/10.453)
+* On the map two Points can be specified
+* The programm paints the shortest way on the map and the distance
+
 
 ## Cloning
 
-When cloning this project, be sure to use the `--recurse-submodules` flag. Using HTTPS:
+When cloning this project, be sure to use the `--recurse-submodules` flag:
 ```
-git clone https://github.com/udacity/CppND-Route-Planning-Project.git --recurse-submodules
-```
-or with SSH:
-```
-git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-submodules
+git clone https://github.com/SandroWissmann/Route-Planner.git --recurse-submodules
 ```
 
 ## Dependencies for Running Locally
@@ -30,32 +34,28 @@ git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-subm
   * Installation instructions for all operating systems can be found [here](https://github.com/cpp-io2d/P0267_RefImpl/blob/master/BUILDING.md)
   * This library must be built in a place where CMake `find_package` will be able to find it
 
-## Compiling and Running
+## Running the application
 
-### Compiling
-To compile the project, first, create a `build` directory and change to that directory:
-```
-mkdir build && cd build
-```
-From within the `build` directory, then run `cmake` and `make` as follows:
-```
-cmake ..
-make
-```
-### Running
-The executable will be placed in the `build` directory. From within `build`, you can run the project as follows:
-```
-./OSM_A_star_search
-```
-Or to specify a map file:
-```
-./OSM_A_star_search -f ../<your_osm_file.osm>
-```
+1. Go to folder `Route-Planner`
+2. Run `make build`
+3. `cd build`
+4. `./route_planner` /<your_osm_file.osm>
 
-## Testing
+You can also run it without providing an osm file. Then the default OSM is used.
+OSM Files can be found [here](https://www.openstreetmap.org/#map=6/51.330/10.453)
 
-The testing executable is also placed in the `build` directory. From within `build`, you can run the unit tests as follows:
-```
-./test
-```
+## Running Tests
 
+1. Clone repo
+1. Go to folder `Route-Planner`
+2. Run `make build`
+3. `cd build`
+4. `./test` 
+
+
+## Additional Commands from Makefile
+
+* `make debug` -> builds with debug information
+* `make format` -> runs [clangFormat](https://clang.llvm.org/docs/ClangFormat.html) on project
+* `make clean` -> deletes build folder
+* `make memcheck` -> builds app and runs it with [valgrind](https://www.valgrind.org/)
