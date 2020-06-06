@@ -59,3 +59,8 @@ OSM Files can be found [here](https://www.openstreetmap.org/#map=6/51.330/10.453
 * `make format` -> runs [clangFormat](https://clang.llvm.org/docs/ClangFormat.html) on project
 * `make clean` -> deletes build folder
 * `make memcheck` -> builds app and runs it with [valgrind](https://www.valgrind.org/)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
