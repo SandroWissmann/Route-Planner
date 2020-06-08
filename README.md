@@ -1,7 +1,5 @@
 # Route Planner
 
-This repo contains the starter code for the Route Planning project.
-
 <img src="docs/konsole.png"/>
 <img src="docs/result.png"/>
 
