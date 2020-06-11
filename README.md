@@ -1,6 +1,4 @@
-# Route Route Planner
-
-This repo contains the starter code for the Route Planning project.
+# Route Planner
 
 <img src="docs/konsole.png"/>
 <img src="docs/result.png"/>
@@ -9,7 +7,7 @@ This repo contains the starter code for the Route Planning project.
 
 * A map can be imported from a [OSM-File](https://www.openstreetmap.org/#map=6/51.330/10.453)
 * On the map start and end coordinates can be specified by the user
-* The programm calculates the shortest distance and paints the way on the map
+* The program calculates the shortest distance and paints the way on the map
 
 
 ## Cloning
